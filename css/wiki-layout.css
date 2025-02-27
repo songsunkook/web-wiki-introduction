@@ -18,6 +18,9 @@ h4 {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+  /* 가운데에 위치 */
+  justify-content: center;
+  background-color: #f6f6f6;
 }
 
 header {
@@ -40,6 +43,10 @@ h1.logo span.text {
 
 main {
   padding: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
 }
 
 h2.title {
@@ -57,16 +64,43 @@ h4 {
   margin-bottom: var(--page-subtitle-margin-y);
 }
 
-section > p,
+section > p {
+  line-height: 24px;
+  text-indent: 0px;
+}
+
 article > p {
   line-height: 24px;
   text-indent: 8px;
 }
 
+.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto; /* 또는 repeat(3, auto) */
+  width: 600px;
+
+  margin: 0 auto; /* 가로 중앙 정렬 */
+}
+
+img.picture {
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* 이미지를 크롭하여 꽉 차게 표시 */
+}
+
+
 section,
 article {
   display: flex;
   flex-flow: column;
+}
+
+article {
+  margin-bottom: 50px;
 }
 
 div.thumbnail {
@@ -97,8 +131,79 @@ aside h2 {
   font-size: 1.7rem;
 }
 
+.comment-writing-container {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  margin-top: 32px;
+}
+
+.comment-writing-container h4 {
+  margin: 16px;
+  margin-left: 8px;
+}
+
+.comment-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f9f9f9;
+}
+
+.comment-input-text {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  resize: none;
+  font-size: 14px;
+}
+
+.comment-item {
+  border: 1px solid #afafaf;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.comment-author {
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-author span {
+  margin-left: 16px;
+  font-family: "Jua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comment-item p {
+  margin-bottom: 0px;
+}
+
+.comment-input-text:focus {
+  outline: none;
+}
+
+.comment-submit-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-submit-button img {
+  width: 24px;
+  height: 24px;
+}
+
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("/images/profile.jpeg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
