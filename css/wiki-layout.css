@@ -84,12 +84,13 @@ article > p {
 }
 
 img.picture {
+  display: block; 
   width: 200px;
   height: 200px;
   margin: 8px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  object-fit: cover; /* 이미지를 크롭하여 꽉 차게 표시 */
+  object-fit: cover;
 }
 
 
@@ -203,7 +204,7 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("/images/profile.jpeg");
+  background-image: url("./images/profile.jpeg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
