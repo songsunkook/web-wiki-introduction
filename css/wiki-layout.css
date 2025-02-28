@@ -132,6 +132,10 @@ aside h2 {
   font-size: 1.7rem;
 }
 
+.go-to-issue {
+  margin-top: 10px;
+}
+
 .comment-writing-container {
   background: #fff;
   padding: 16px;
