@@ -207,6 +207,10 @@ aside h2 {
   height: 24px;
 }
 
+.comment-avatar {
+  width: 48px;
+}
+
 .profile-image {
   background-image: url("../images/profile.jpeg");
   background-size: 100%;

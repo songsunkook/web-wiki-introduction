@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.innerHTML = `
           <div class="comment-item">
             <div class="comment-author">
-              <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+              <img src="${comment.user.avatar_url}" alt="${comment.user.login}" class="comment-avatar"/>
               <span>${comment.user.login}</span>
             </div>
             <div class="comment-content">${comment.body}</div>
